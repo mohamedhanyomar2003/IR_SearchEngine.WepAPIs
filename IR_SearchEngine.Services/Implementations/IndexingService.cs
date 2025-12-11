@@ -21,17 +21,15 @@ namespace IR_SearchEngine.Services.Implementations
 
         public void IndexDocument(int id, string content)
         {
-            // 1. تخزين النص الأصلي
+          
             _repo.AddDocument(id, content);
 
-            // 2. استخدام الدالة الجديدة اللي بترجع الكلمات وأماكنها
             var tokensWithPos = _processor.AnalyzeWithPositions(content);
 
-            // 3. التخزين في الفهارس
             foreach (var item in tokensWithPos)
             {
-                string term = item.term;     // الكلمة المعالجة (Stemmed)
-                int position = item.position; // مكانها الأصلي
+                string term = item.term;     
+                int position = item.position;
 
                 // Inverted Index
                 _repo.AddToInvertedIndex(term, id);
@@ -44,7 +42,6 @@ namespace IR_SearchEngine.Services.Implementations
 
         public Dictionary<int, string> GetAllDocuments()
         {
-            // بنجيب الداتا من الريبو مباشرة
             return _repo.GetAllDocuments();
         }
     }

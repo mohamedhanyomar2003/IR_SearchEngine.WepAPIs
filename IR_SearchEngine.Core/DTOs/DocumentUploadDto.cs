@@ -8,7 +8,7 @@ namespace IR_SearchEngine.Core.DTOs
 {
     public class DocumentUploadDto
     {
-        public int Id { get; set; }       // رقم المستند (اليوزر هيحدده يدوياً للتسهيل)
-        public string ?Content { get; set; } // النص اللي جوه المستند
+        public int Id { get; set; }      
+        public string ?Content { get; set; } 
     }
 }

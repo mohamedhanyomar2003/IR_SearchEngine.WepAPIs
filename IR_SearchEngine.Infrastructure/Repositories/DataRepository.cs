@@ -15,8 +15,6 @@ namespace IR_SearchEngine.Infrastructure.Repositories
             Documents = new Dictionary<int, string>();
             InvertedIndex = new Dictionary<string, HashSet<int>>();
             PositionalIndex = new Dictionary<string, Dictionary<int, List<int>>>();
-
-            // Seed Data (Lab 4 & 1)
             SeedData();
         }
 
@@ -29,20 +27,20 @@ namespace IR_SearchEngine.Infrastructure.Repositories
             AddDocument(4, "new hopes for schizophrenia patients");
             AddDocument(5, "The study of relativity and theoretical physics");
 
-            // --- Category 2: Cars & Business (From IR Lab 4) ---
+            // --- Category 2: Cars & Business () ---
             AddDocument(6, "Chevrolet and Renault were winners");
             AddDocument(7, "Renault and Chevrolet were the number four seller");
             AddDocument(8, "Chevrolet produces vehicles");
             AddDocument(9, "Ford and Chevrolet are competing in the market");
 
-            // --- Category 3: History & Literature (From IR Lab 4 - Shakespeare) ---
+            // --- Category 3: History & Literature ( Shakespeare) ---
             AddDocument(10, "When Antony found Julius Caesar dead");
             AddDocument(11, "When at Philippi he found Brutus slain");
             AddDocument(12, "I did enact Julius Caesar, Brutus killed me");
             AddDocument(13, "The noble Brutus hath told you Caesar was ambitious");
 
-            // --- Category 4: Stemming Stress Test (From Lab 5 Porter) ---
-            // الغرض: التأكد ان connect, connected, connecting بيرجعوا لنفس الجذر
+            // --- Category 4: Stemming Stress Test () ---
+            // الغرض: التأكد ان connect, connected, connecting   
             AddDocument(14, "I want to connect to the internet");
             AddDocument(15, "We are connected by a strong network");
             AddDocument(16, "Connecting people is our mission");

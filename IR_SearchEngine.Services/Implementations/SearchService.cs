@@ -159,7 +159,7 @@ namespace IR_SearchEngine.Services.Implementations
                     matchingTerms.Add(key);
                     if (!suggestions.Contains(key))
                     {
-                        suggestions.Add(key); // ضيف كلمة schizophrenia للقائمة
+                        suggestions.Add(key); 
                     }
                 }
             }
@@ -214,7 +214,7 @@ namespace IR_SearchEngine.Services.Implementations
         {
             var cleanTokens = new List<string>();
             var operators = new HashSet<string> { "AND", "OR", "NOT" };
-            var binaryOperators = new HashSet<string> { "AND", "OR" }; // دول محتاجين طرفين
+            var binaryOperators = new HashSet<string> { "AND", "OR" }; 
 
             for (int i = 0; i < tokens.Length; i++)
             {
